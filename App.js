@@ -1,41 +1,28 @@
-import { StatusBar } from "expo-status-bar";
+//import { StatusBar } from "expo-status-bar";
 import React from "react";
 import {
   StyleSheet,
-  Text,
-  View,
-  TouchableOpacity,
-  TouchableHighlight,
   SafeAreaView,
-  Image,
+  Platform,
+  StatusBar,
+  View,
+  Button,
+  Dimensions,
+  ImageBackground,
 } from "react-native";
+import {
+  useDimensions,
+  useDeviceOrientation,
+} from "@react-native-community/hooks";
+import WelcomeScreen from "./app/screens/WelcomeScreen";
+import ViewImageScreen from "./app/screens/ViewImageScreen";
 
 export default function App() {
-  const handlePress = () => {
-    console.log("Press!");
-  };
-  return (
-    <SafeAreaView style={styles.container}>
-      <Text onPress={handlePress}>Hello World!</Text>
-      <TouchableHighlight>
-        <Image
-          source={{
-            width: 200,
-            height: 300,
-            uri: "https://picsum.photos/200/300",
-          }}
-        />
-      </TouchableHighlight>
-      <StatusBar style="auto" />
-    </SafeAreaView>
-  );
+  // const { landscape } = useDeviceOrientation();
+  // const handlePress = () => {
+  //   console.log("Press!");
+  // };
+  return <ViewImageScreen />;
 }
 
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    backgroundColor: "#eee",
-    alignItems: "center",
-    justifyContent: "center",
-  },
-});
+const styles = StyleSheet.create({});
