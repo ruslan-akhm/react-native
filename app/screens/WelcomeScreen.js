@@ -1,7 +1,14 @@
 import React from "react";
-import { ImageBackground, StyleSheet, View, Image, Text } from "react-native";
+import {
+  ImageBackground,
+  StyleSheet,
+  View,
+  Image,
+  Text,
+  Button,
+} from "react-native";
 
-function WelcomeScreen() {
+function WelcomeScreen({ navigation }) {
   return (
     <ImageBackground
       source={{
@@ -14,7 +21,12 @@ function WelcomeScreen() {
         <Image style={styles.logo} source={require("../assets/favicon.png")} />
         <Text style={styles.logotext}>Test app!</Text>
       </View>
-      <View style={styles.loginBtn}></View>
+      <View style={styles.loginBtn}>
+        <Button
+          title="Go to Details"
+          onPress={() => navigation.navigate("Details")}
+        />
+      </View>
       <View style={styles.signupBtn}></View>
     </ImageBackground>
   );

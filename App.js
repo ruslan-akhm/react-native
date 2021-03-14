@@ -14,15 +14,17 @@ import {
   useDimensions,
   useDeviceOrientation,
 } from "@react-native-community/hooks";
-import WelcomeScreen from "./app/screens/WelcomeScreen";
-import ViewImageScreen from "./app/screens/ViewImageScreen";
+//import WelcomeScreen from "./app/screens/WelcomeScreen";
+//import ViewImageScreen from "./app/screens/ViewImageScreen";
+
+import AppNavigator from "./routes/HomeStack";
 
 export default function App() {
   // const { landscape } = useDeviceOrientation();
   // const handlePress = () => {
   //   console.log("Press!");
   // };
-  return <ViewImageScreen />;
+  return <AppNavigator />;
 }
 
 const styles = StyleSheet.create({});
